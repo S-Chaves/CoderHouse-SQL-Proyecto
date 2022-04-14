@@ -3,13 +3,13 @@ USE peliculas;
 INSERT INTO actores (id_actor, nombre, apellido, pais, cantidad_premios, ultima_pelicula, fecha_nacimiento) VALUES 
 (NULL, 'Tadio', 'Hapke', 'Panama', 16, 'Great Outdoors, The', '1975-03-25'),
 (NULL, 'Archibold', 'Leng', 'Russia', 10, 'Favor, The', '1990-06-20'),
-(NULL, 'Bryna', 'Howles', 'Colombia', 16, 'American Pie Presents: The Book of Love (American Pie 7: The Book of Love)', '1972-04-05'),
-(NULL, 'Greggory', 'Durward', 'Sweden', 12, 'When Darkness Falls (När mörkret faller)', '1962-11-12'),
-(NULL, 'Nevil', 'Benson', 'Greece', 12, 'Man Who Loved Women, The (Homme qui aimait les femmes, L'')', '1984-08-08'),
-(NULL, 'Dinah', 'Houson', 'China', 17, 'Eden of the East the Movie II: Paradise Lost (Higashi no Eden Gekijôban II: Paradise Lost)', '1960-03-07'),
+(NULL, 'Bryna', 'Howles', 'Colombia', 16, 'American Pie The Book of Love', '1972-04-05'),
+(NULL, 'Greggory', 'Durward', 'Sweden', 12, 'When Darkness Falls', '1962-11-12'),
+(NULL, 'Nevil', 'Benson', 'Greece', 12, 'Man Who Loved Women', '1984-08-08'),
+(NULL, 'Dinah', 'Houson', 'China', 17, 'Eden of the East II', '1960-03-07'),
 (NULL, 'Thia', 'Marcroft', 'Azerbaijan', 5, 'One on One', '1977-04-12'),
 (NULL, 'Pierette', 'Byway', 'Portugal', 9, 'Christmas in Connecticut', '1992-03-04'),
-(NULL, 'Percy', 'Blindt', 'Philippines', 18, 'I Want Someone to Eat Cheese With', '1970-05-04'),
+(NULL, 'Percy', 'Blindt', 'Philippines', 18, 'I Want Someone to Eat Cheese', '1970-05-04'),
 (NULL, 'Isaiah', 'Tixier', 'Sweden', 18, 'Stroszek', '1996-11-04');
 
 INSERT INTO directores (id_director, nombre, apellido, pais, cantidad_premios, cantidad_peliculas_dirigidas, fecha_nacimiento) VALUES 
@@ -39,15 +39,15 @@ INSERT INTO servicios (id_servicio, nombre, pagina_web, precio_mensual, cantidad
 (NULL, 'Paramount Plus', 'https://www.paramountplus.com/', 8.4, 138);
 
 INSERT INTO peliculas (id_pelicula, id_director, nombre, puntaje, fecha_estreno, cantidad_premios, dinero_recaudado) VALUES
-(NULL, 2, 'Taming the Fire (Ukroshcheniye ognya)', 3.2, '1977-08-08', 8, 105012923),
+(NULL, 2, 'Taming the Fire', 3.2, '1977-08-08', 8, 105012923),
 (NULL, 6, 'Prom', 4.0, '1987-03-30', 8, 374314638),
 (NULL, 3, 'It''s Alive', 8.6, '1990-11-09', 7, 362915355),
 (NULL, 2, 'Summer in February', 8.2, '1987-04-22', 1, 247863519),
 (NULL, 6, 'Of Unknown Origin', 1.8, '1985-09-12', 13, 370598982),
 (NULL, 1, 'American Addict', 2.3, '1959-02-21', 13, 157221482),
-(NULL, 10, 'Belle comme la femme d''un autre', 5.7, '1970-06-23', 10, 70043827),
+(NULL, 10, 'Belle comme la femme', 5.7, '1970-06-23', 10, 70043827),
 (NULL, 2, 'Precious', 2.2, '1984-04-28', 5, 351896624),
-(NULL, 4, 'Seagull''s Laughter, The (Mávahlátur)', 1.9, '1969-05-08', 22, 453621353),
+(NULL, 4, 'Seagull''s Laughter', 1.9, '1969-05-08', 22, 453621353),
 (NULL, 5, 'Bigga Than Ben', 3.1, '1996-12-11', 18, 191516833);
 
 INSERT INTO serviciospeliculas (id_relacion, id_pelicula, id_servicio) VALUES 
