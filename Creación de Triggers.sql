@@ -19,6 +19,9 @@ BEGIN
     VALUES (NULL, NEW.nombre, user(), curdate(), curtime());
 END$$
 DELIMITER ;
+-- Se insertan datos de prueba
+INSERT INTO peliculas (id_pelicula, id_director, nombre, puntaje, fecha_estreno, cantidad_premios, dinero_recaudado) VALUES
+(NULL, 4, 'Titanic', 9.0, '1998-02-05', 11, 703015323);
 
 -- Tabla con los logs de los deletes en la tabla películas.
 CREATE TABLE peliculas_delete_log (
@@ -42,3 +45,6 @@ BEGIN
     VALUES (NULL, OLD.id_pelicula, OLD.nombre, user(), curdate(), curtime());
 END$$
 DELIMITER ;
+-- Se eliminan datos de prueba
+DELETE FROM peliculas
+WHERE nombre = 'Titanic';
