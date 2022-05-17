@@ -1,17 +1,20 @@
 USE peliculas;
 
 START TRANSACTION;
--- Borro todos actores que tengan un nombre que comienza con la letra P.
-DELETE FROM actores
-WHERE nombre LIKE 'P%';
+-- Borro las relaciones de las peliculas con id mayor a 8 y menor a 11.
+DELETE FROM actorespeliculas 
+WHERE (id_pelicula > 8) AND (id_pelicula < 11);
 -- Sentencias Rollback y Commit.
 -- ROLLBACK;
 -- COMMIT;
 
--- Insert con los actores eliminados anteriormente.
--- INSERT INTO actores (id_actor, nombre, apellido, pais, cantidad_premios, ultima_pelicula, fecha_nacimiento) VALUES 
--- (NULL, 'Pierette', 'Byway', 'Portugal', 9, 'Christmas in Connecticut', '1992-03-04'),
--- (NULL, 'Percy', 'Blindt', 'Philippines', 18, 'I Want Someone to Eat Cheese', '1970-05-04');
+-- Insert con las relaciones eliminadas anteriormente.
+-- INSERT INTO actorespeliculas (id_actor, nombre, apellido, pais, cantidad_premios, ultima_pelicula, fecha_nacimiento) VALUES 
+-- (NULL, 10, 1),
+-- (NULL, 10, 6),
+-- (NULL, 10, 2),
+-- (NULL, 10, 3),
+-- (NULL, 9, 10);
 
 START TRANSACTION;
 -- Inserto los primeros cuatro directores.
@@ -29,6 +32,9 @@ INSERT INTO directores (id_director, nombre, apellido, pais, cantidad_premios, c
 (NULL, 'Warde', 'Glyne', 'Portugal', 20, 14, '1995-05-31'),
 (NULL, 'Robinetta', 'Cabera', 'Norway', 22, 7, '1987-06-01');
 SAVEPOINT otros_cuatro_directores;
+-- Rollback al primer savepoint
+-- ROLLBACK TO primeros_cuatro_directores;
+
 -- Eliminación del primer savepoint.
 -- RELEASE SAVEPOINT primeros_cuatro_directores;
 
