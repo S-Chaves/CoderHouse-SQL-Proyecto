@@ -57,7 +57,7 @@ INSERT INTO serviciospeliculas (id_relacion, id_pelicula, id_servicio) VALUES
 (NULL, 6, 2),
 (NULL, 2, 2),
 (NULL, 3, 1),
-(NULL, 9, 4),
+(NULL, 9, 2),
 (NULL, 1, 4),
 (NULL, 3, 4),
 (NULL, 8, 3),
@@ -75,7 +75,7 @@ INSERT INTO generospeliculas (id_relacion, id_pelicula, id_genero) VALUES
 (NULL, 5, 5),
 (NULL, 9, 1),
 (NULL, 1, 2),
-(NULL, 3, 5),
+(NULL, 3, 4),
 (NULL, 7, 5);
 
 INSERT INTO actorespeliculas (id_relacion, id_pelicula, id_actor) VALUES 
@@ -88,8 +88,8 @@ INSERT INTO actorespeliculas (id_relacion, id_pelicula, id_actor) VALUES
 (NULL, 2, 8),
 (NULL, 6, 10),
 (NULL, 2, 4),
-(NULL, 10, 1),
-(NULL, 10, 1),
+(NULL, 10, 6),
+(NULL, 10, 2),
 (NULL, 8, 9),
 (NULL, 2, 10),
 (NULL, 5, 9),
