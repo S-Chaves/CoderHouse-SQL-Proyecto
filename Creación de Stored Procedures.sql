@@ -35,3 +35,7 @@ BEGIN
 	(NULL, p_nombre, p_pagina_web, p_precio_mensual);
 END$$
 DELIMITER ;
+
+-- Pruebas de los stored procedures.
+-- call sp_get_peliculas_order('cantidad_premios', 'DESC');
+-- call sp_agregar_servicio('Star Plus', 'https://www.starplus.com/', '8.6');
