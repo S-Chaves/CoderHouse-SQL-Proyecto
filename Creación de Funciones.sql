@@ -56,3 +56,10 @@ BEGIN
 	RETURN mayor;
 END$$
 DELIMITER ;
+
+-- Pruebas de las funciones.
+-- SELECT
+-- 	concat(nombre, ' ', apellido) AS Director,
+-- 	calcular_tiempo(fecha_nacimiento) AS Edad 
+-- FROM directores;
+-- SELECT mayor_recaudacion(3, 5);
