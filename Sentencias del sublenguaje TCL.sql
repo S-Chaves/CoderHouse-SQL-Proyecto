@@ -1,36 +1,28 @@
 USE peliculas;
 
 START TRANSACTION;
--- Borro las relaciones de las peliculas con id mayor a 8 y menor a 11.
-DELETE FROM actorespeliculas 
-WHERE (id_pelicula > 8) AND (id_pelicula < 11);
+-- Borro las relaciones de las peliculas con id mayor a 6 y menor a 9.
+DELETE FROM actores_peliculas 
+WHERE (id_pelicula > 6) AND (id_pelicula < 9);
 -- Sentencias Rollback y Commit.
 -- ROLLBACK;
 -- COMMIT;
 
--- Insert con las relaciones eliminadas anteriormente.
--- INSERT INTO actorespeliculas (id_actor, nombre, apellido, pais, cantidad_premios, ultima_pelicula, fecha_nacimiento) VALUES 
--- (NULL, 10, 1),
--- (NULL, 10, 6),
--- (NULL, 10, 2),
--- (NULL, 10, 3),
--- (NULL, 9, 10);
-
 START TRANSACTION;
 -- Inserto los primeros cuatro directores.
-INSERT INTO directores (id_director, nombre, apellido, pais, cantidad_premios, cantidad_peliculas_dirigidas, fecha_nacimiento) VALUES 
-(NULL, 'Umberto', 'Uff', 'Somalia', 21, 4, '1996-08-01'),
-(NULL, 'Cynthie', 'Adlard', 'Greece', 11, 5, '1991-01-27'),
-(NULL, 'Gale', 'Rosenstengel', 'Sweden', 10, 15, '1989-03-13'),
-(NULL, 'Jaimie', 'McMichael', 'Peru', 18, 6, '1990-09-09');
+INSERT INTO directores (id_director, id_pais, nombre, apellido, cantidad_premios, cantidad_peliculas_dirigidas, fecha_nacimiento) VALUES 
+(NULL, 4, 'Francis', 'Ford Coppola', 49, 37, '1939-03-07'),
+(NULL, 4, 'Robert', 'Zemeckis', 35, 33, '1951-05-14'),
+(NULL, 4, 'David', 'Fincher', 70, 95, '1962-08-28'),
+(NULL, 4, 'Irvin', 'Kershner', 5, 32, '1923-03-29');
 -- Creo un savepoint después de estos.
 SAVEPOINT primeros_cuatro_directores;
 -- Inserto los otros cuatro directores.
-INSERT INTO directores (id_director, nombre, apellido, pais, cantidad_premios, cantidad_peliculas_dirigidas, fecha_nacimiento) VALUES 
-(NULL, 'Reece', 'Tomes', 'China', 3, 10, '1982-10-13'),
-(NULL, 'Bar', 'Durran', 'Philippines', 14, 16, '1985-11-11'),
-(NULL, 'Warde', 'Glyne', 'Portugal', 20, 14, '1995-05-31'),
-(NULL, 'Robinetta', 'Cabera', 'Norway', 22, 7, '1987-06-01');
+INSERT INTO directores (id_director, id_pais, nombre, apellido, cantidad_premios, cantidad_peliculas_dirigidas, fecha_nacimiento) VALUES 
+(NULL, 4, 'Steven', 'Spielberg', 195, 57, '1946-12-18'),
+(NULL, 8, 'Alfred', 'Hitchcock', 31, 69, '1899-08-13'),
+(NULL, 8, 'Ridley', 'Scott', 49, 56, '1937-11-30'),
+(NULL, 4, 'Joseph', 'Kosinski', 0, 9, '1974-05-03');
 SAVEPOINT otros_cuatro_directores;
 -- Rollback al primer savepoint
 -- ROLLBACK TO primeros_cuatro_directores;
