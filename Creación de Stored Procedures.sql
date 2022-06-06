@@ -29,9 +29,9 @@ DELIMITER ;
 DELIMITER $$
 USE `peliculas`$$
 CREATE PROCEDURE `sp_agregar_servicio` (IN p_nombre VARCHAR(20), IN p_pagina_web VARCHAR(50),
-									IN p_precio_mensual DOUBLE, IN p_cantidad_peliculas INT)
+									IN p_precio_mensual DOUBLE)
 BEGIN
-	INSERT INTO servicios (id_servicio, nombre, pagina_web, precio_mensual, cantidad_peliculas) VALUES 
-	(NULL, p_nombre, p_pagina_web, p_precio_mensual, p_cantidad_peliculas);
+	INSERT INTO servicios (id_servicio, nombre, pagina_web, precio_mensual) VALUES 
+	(NULL, p_nombre, p_pagina_web, p_precio_mensual);
 END$$
 DELIMITER ;
