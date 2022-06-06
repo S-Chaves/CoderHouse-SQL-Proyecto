@@ -24,7 +24,7 @@ BEGIN
 END$$
 DELIMITER ;
 
--- Recibe nombre, pagina web, precio mensual y cantidad de peliculas de un servicio, en ese orden,
+-- Recibe nombre, pagina web y precio mensual de un servicio, en ese orden,
 -- y agrega el servicio a la tabla servicios
 DELIMITER $$
 USE `peliculas`$$
