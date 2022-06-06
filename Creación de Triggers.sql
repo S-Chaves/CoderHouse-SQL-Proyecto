@@ -1,7 +1,7 @@
 -- Tabla con los logs de los inserts en la tabla películas.
 CREATE TABLE peliculas_insert_log (
 	id_log INT NOT NULL AUTO_INCREMENT,
-    nombre_pelicula VARCHAR(30) NOT NULL,
+    nombre_pelicula VARCHAR(40) NOT NULL,
 	usuario VARCHAR(45) NOT NULL,
 	fecha DATE NOT NULL,
     hora TIME NOT NULL,
@@ -20,14 +20,14 @@ BEGIN
 END$$
 DELIMITER ;
 -- Se insertan datos de prueba
-INSERT INTO peliculas (id_pelicula, id_director, nombre, puntaje, fecha_estreno, cantidad_premios, dinero_recaudado) VALUES
-(NULL, 4, 'Titanic', 9.0, '1998-02-05', 11, 703015323);
+INSERT INTO peliculas (id_pelicula, id_director, id_idioma, id_pais, id_clasificacion, nombre, puntaje, fecha_estreno, cantidad_premios, dinero_recaudado) VALUES
+(NULL, 9, 3, 4, 4, 'Terminator', 8.1, '1984-10-26', 8, 78371200);
 
 -- Tabla con los logs de los deletes en la tabla películas.
 CREATE TABLE peliculas_delete_log (
 	id_log INT NOT NULL AUTO_INCREMENT,
     id_pelicula INT NOT NULL,
-    nombre_pelicula VARCHAR(30) NOT NULL,
+    nombre_pelicula VARCHAR(40) NOT NULL,
 	usuario VARCHAR(45) NOT NULL,
 	fecha DATE NOT NULL,
     hora TIME NOT NULL,
@@ -47,4 +47,4 @@ END$$
 DELIMITER ;
 -- Se eliminan datos de prueba
 DELETE FROM peliculas
-WHERE nombre = 'Titanic';
+WHERE nombre = 'Terminator' LIMIT 1;
