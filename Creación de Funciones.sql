@@ -1,5 +1,5 @@
 -- Función para calcular el tiempo que paso en años desde un evento,
--- como el estreno de una película.
+-- como el estreno de una película o el nacimiento de una persona.
 DELIMITER $$
 USE `peliculas`$$
 CREATE FUNCTION `calcular_tiempo` (fecha_inicio DATE)
@@ -31,12 +31,12 @@ DELIMITER ;
 DELIMITER $$
 USE `peliculas`$$
 CREATE FUNCTION `mayor_recaudacion` (id_1 INT, id_2 INT)
-RETURNS VARCHAR(30)
+RETURNS VARCHAR(40)
 READS SQL DATA	
 BEGIN
 	DECLARE pelicula_recaudacion_1 INT;
     DECLARE pelicula_recaudacion_2 INT;
-	DECLARE mayor VARCHAR(30);
+	DECLARE mayor VARCHAR(40);
     
     SET pelicula_recaudacion_1 =
 		(SELECT dinero_recaudado FROM peliculas p
@@ -56,4 +56,3 @@ BEGIN
 	RETURN mayor;
 END$$
 DELIMITER ;
-
